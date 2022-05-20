@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+
 
 
 function about() {

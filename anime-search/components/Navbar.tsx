@@ -4,7 +4,9 @@ function Navbar() {
     return ( 
         <nav>
             <ul>
-                <li>test</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Privacy</li>
             </ul>
         </nav>
      );

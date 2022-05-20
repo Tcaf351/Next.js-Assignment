@@ -1,12 +1,8 @@
-// import { NextPage } from 'next'
-
-import Footer from '../components/Footer'
+// Components
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
-// const Home: NextPage = () => {
-// export const Layout: NextPage = ({ children }) {
-// export default function Layout: NextPage ({ children }) {
-const Layout = ({ children }: any) => {
+const Layout = ({ children }: any): any => {
     return (
         <>
             <Navbar />
