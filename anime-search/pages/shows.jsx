@@ -2,7 +2,7 @@
 
 function Shows() {
     return ( 
-        <div>
+        <div className="min-h-screen">
             <h1>Individual shows page</h1>
         </div>
      );
