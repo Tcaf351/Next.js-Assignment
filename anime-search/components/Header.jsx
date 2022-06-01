@@ -3,7 +3,7 @@ import Head from 'next/head';
 function Header({ title }) {
     return ( 
         <Head>
-            <title>Anime-Search | { title }</title>
+            <title>Weather Search | { title }</title>
         </Head>
      );
 }

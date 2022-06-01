@@ -13,6 +13,7 @@ function Privacy() {
                 <p>We take steps to ensure your info remains confidential</p>
                 <p>We will take all reasonable steps to ensure that these entities and organisations are <br /> bound by confidentiality and privacy obligations with respect to the protection of your personal information.</p>
             </div>
+            <p>Privacy policy cited from spaceship.com.au</p>
         </div>
      );
 }
