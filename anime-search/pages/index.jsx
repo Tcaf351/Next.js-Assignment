@@ -1,5 +1,5 @@
 // import type { NextPage } from 'next'
-import Header from '../components/Header';
+
 
 // const Home: NextPage = () => {
   const Home = (props) => {
@@ -8,7 +8,6 @@ import Header from '../components/Header';
   return (
     
     <div className="min-h-screen bg-gray-100 px-20 flex">
-        <Header title="Home" />
 
         {/* text on left of screen start */}
         <div className="flex flex-col items-start justify-center h-screen">
@@ -16,7 +15,7 @@ import Header from '../components/Header';
             <h1 className="text-5xl font-medium">Welcome to</h1> <span className="text-5xl font-medium px-3 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">Weather Search</span>
           </div>
           <div>
-            <h1 className="text-xl py-1">Your source for searching your city's current weather!</h1>
+            <h1 className="text-xl py-1">Your source for searching your citys current weather!</h1>
           </div>
         </div>
         {/* text on left of screen end */}

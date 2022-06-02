@@ -1,50 +1,38 @@
 // import axios from 'axios';
-import Header from '../components/Header';
 
-function Shows(props) {
-    
+import Form from "../components/Form";
+
+
+function Search(props) {
+    console.log(`props: ${props}`);
 
     return ( 
-        <div className="min-h-screen bg-gray-100">
-            <Header title="Search" />
-            <h1>Hello World</h1>
-            <div className='flex flex-col items-center justify-center h-1/2'>
-                <form className='flex flex-col justify-center'>
-                    <label>City</label>
-                    <input type="text" className='rounded-md' />
-                    <label>Country Code</label>
-                    <input type="text" className='rounded-md' />
-                    <div className='flex justify-center my-2'>
-                        <button type="submit" className='bg-gray-300 rounded-md w-1/2'>Submit</button>
-                    </div>
-                </form>
+        <div className="min-h-screen bg-gradient-to-bl from-orange-200 via-cyan-300 to-sky-300">
+
+            <div className='flex flex-col items-center justify-center h-1/2 pt-6'>
+                <Form />
             </div>
         </div>
      );
 }
 
+export const getServerSideProps = async (context) => {
+    console.log(context)
 
-// export const getStaticPaths = async (context) => {
-//   return {
-//     props: {},
-//   };
-// };
-
-// export const getServerSideProps = async (context) => {
     const api = process.env.API_KEY;
     let city;
     let countryCode;
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
 
-    // const fetchApi = await axios.get(`${url}people`);
-    // const results = fetchApi.data;
+    const response = await fetch(url);
+    const data = await response.json();
 
 
-//   return {
-//     props: {
-//         results
-//     },
-//   };
-// };
+  return {
+    props: {
+        data,
+    },
+  };
+};
 
-export default Shows;
+export default Search;
