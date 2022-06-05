@@ -4,13 +4,16 @@ import Image from 'next/image';
 function WeatherSVG({ weatherIcon, cityData }) {
     switch (weatherIcon) {
         case "01d":
-            return <Image 
+            return (
+                <div>
+                    <Image 
                     src="/Images/day.svg" 
                     alt={ cityData?.weather[0].description } 
                     height={250}
                     width={250}
                     />
-            break;
+                </div>
+            )
 
         case "01n":
             return <Image 
@@ -19,7 +22,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
 
         case "02d":
             return <Image 
@@ -28,7 +30,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
 
         case "02n" :
             return <Image 
@@ -37,7 +38,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
         
         case "03d" || "03n" || "04d" || "04n":
             return <Image 
@@ -46,7 +46,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     /> 
-            break;
         
         case "09d" || "09n" || "10d" || "10n":
             return <Image 
@@ -55,7 +54,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
         
         case "11d" || "11n":
             return <Image 
@@ -73,7 +71,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
         
         case "50d" || "50n":
             return <Image 
@@ -82,7 +79,6 @@ function WeatherSVG({ weatherIcon, cityData }) {
                     height={250}
                     width={250}
                     />
-            break;
     
         default: return <Image 
                         src="/Images/cloudy-day-1.svg" 

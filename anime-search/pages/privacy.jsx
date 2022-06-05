@@ -1,8 +1,11 @@
+import Header from "../components/Header";
 
 
 function Privacy() {
     return ( 
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+            <Header title="Privacy" />
+
             <div className="p-10">
                 <h1 className="text-3xl pb-8">Privacy Policy</h1>
                 <p>Sharing your information as required or permitted by law</p>

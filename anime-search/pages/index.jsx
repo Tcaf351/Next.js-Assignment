@@ -1,5 +1,5 @@
 // import type { NextPage } from 'next'
-
+import Header from "../components/Header";
 
 // const Home: NextPage = () => {
   const Home = (props) => {
@@ -9,6 +9,7 @@
   return (
     
     <div className="min-h-screen bg-gray-100 px-20 flex">
+      <Header title="Home" />
 
         {/* text on left of screen start */}
         <div className="flex flex-col items-start justify-center h-screen">
@@ -25,8 +26,8 @@
         {/* image on right of screen start */}
         <div className="flex flex-col items-center justify-center w-1/2">
             <h1>{ props.data.name }</h1>
-            <h1>Current temperature: { Math.round(props.data.main.temp) } C</h1>
-            <h1>{ props.data.weather[0].description }</h1>
+            <h1>Current temperature: { Math.round(props.data?.main.temp) } C</h1>
+            <h1>{ props.data?.weather[0].description }</h1>
           </div>
         {/* image on right of screen end */}
 

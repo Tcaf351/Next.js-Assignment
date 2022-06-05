@@ -5,8 +5,7 @@ import Footer from '../components/Footer'
 
 const Layout = ({ children }: any): any => {
     return (
-        <div> 
-            <Header title={ children.type.name } /> {/* dynamically changes title based on page user is on */}
+        <div>
             <Navbar />
                 <main>{ children }</main>
             <Footer /> 

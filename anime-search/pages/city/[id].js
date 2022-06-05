@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import WeatherSVG from '../../components/WeatherSVG';
+import Header from '../../components/Header';
 
 function City() {
     const router = useRouter();
@@ -28,15 +29,17 @@ function City() {
 
     useEffect(() => {
         fetchData()
-    }, []);
+    }, [weatherIcon, cityData]);
 
     console.log(cityData);
 
     
     return ( 
         <div className='h-screen'>
+            <Header title={id} />
+
             <h1 className='capitalize font-semibold text-2xl'>{id}</h1>
-            <h1>Current temperature { Math.round(cityData?.main.temp) }C</h1>
+            <h1>Current temperature { Math.round(cityData?.main.temp) } C</h1>
             <h1>{ cityData?.weather[0].description }</h1>
 
         <WeatherSVG 

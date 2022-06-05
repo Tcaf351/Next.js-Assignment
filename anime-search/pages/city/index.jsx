@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Header from '../../components/Header';
 
 function Search() {
-    const router = useRouter();
 
     return ( 
         <div className="min-h-screen bg-gradient-to-bl from-orange-200 via-cyan-300 to-sky-300">
+            <Header title="Search" />
 
             <div className='flex flex-col items-center justify-center h-1/2 pt-6'>
                 <Link href="/city/melbourne">
