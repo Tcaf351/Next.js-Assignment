@@ -29,7 +29,7 @@ function City() {
 
     useEffect(() => {
         fetchData()
-    }, []);
+    });
 
     console.log(cityData);
 
