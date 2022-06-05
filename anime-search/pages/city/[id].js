@@ -29,7 +29,7 @@ function City() {
 
     useEffect(() => {
         fetchData()
-    }, [weatherIcon, cityData]);
+    }, []);
 
     console.log(cityData);
 
