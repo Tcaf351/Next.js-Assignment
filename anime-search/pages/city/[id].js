@@ -1,11 +1,14 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
+import WeatherSVG from '../../components/WeatherSVG';
 
 function City() {
     const router = useRouter();
     const { id } = router.query;
 
     const [cityData, setCityData] = useState();
+    const [weatherIcon, setWeatherIcon] = useState();
 
     
     const fetchData = async () => {
@@ -17,7 +20,9 @@ function City() {
         
         const response = await fetch(url);
         const data = await response.json();
+
         setCityData(data)
+        setWeatherIcon(data?.weather[0].icon)
     }
 
 
@@ -27,13 +32,19 @@ function City() {
 
     console.log(cityData);
 
-
     
     return ( 
         <div className='h-screen'>
             <h1 className='capitalize font-semibold text-2xl'>{id}</h1>
             <h1>Current temperature { Math.round(cityData?.main.temp) }C</h1>
             <h1>{ cityData?.weather[0].description }</h1>
+
+        <WeatherSVG 
+            weatherIcon={weatherIcon} 
+            cityData={cityData}
+            />
+            
+
         </div>
      );
 }
