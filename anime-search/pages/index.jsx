@@ -9,7 +9,11 @@ import Header from "../components/Header";
   return (
     
     <div className="min-h-screen bg-gray-100 px-20 flex">
-      <Header title="Home" />
+      <Header 
+        title="Home" 
+        description="This is the home page"
+        content="This is the home page. You can search for different weather in different cities in Australia"
+      />
 
         {/* text on left of screen start */}
         <div className="flex flex-col items-start justify-center h-screen">
