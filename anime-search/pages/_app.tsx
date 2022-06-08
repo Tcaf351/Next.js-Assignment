@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-J8DVJ1K3ZW`} 
+        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.GOOGLE_ANALYTICS_ID}`} 
         strategy='afterInteractive'
       />
       <Script
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
            function gtag(){dataLayer.push(arguments);}
            gtag('js', new Date());
          
-           gtag('config', 'G-J8DVJ1K3ZW');
+           gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}' );
         ` }
       </Script>
       <Layout>
