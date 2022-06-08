@@ -38,7 +38,7 @@ import Header from "../components/Header";
   
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async () => {
   const api = process.env.API_KEY3;
   let city = 'Melbourne';
   let countryCode = 'Au';
