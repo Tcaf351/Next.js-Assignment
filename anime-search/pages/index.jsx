@@ -28,10 +28,10 @@ import Header from "../components/Header";
             <h1>{ props.data.name }</h1>
             <h1>Current temperature: { Math.round(props.data?.main.temp) } C</h1>
             <h1>{ props.data?.weather[0].description }</h1>
-          </div>
+        </div>
         {/* image on right of screen end */}
 
-      </div>
+    </div>
   )
   
 
