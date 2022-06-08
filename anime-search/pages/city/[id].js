@@ -14,8 +14,8 @@ function City() {
     
     const fetchData = async () => {
         
-        // const api = process.env.API_KEY;
-        const api = 'fe987a03fceb54af8bc3704a4ce21144';
+        // const api = process.env.API_KEY3;
+        const api = 'd515c35362237a42c19d6d5d1aadbf97';
         
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${id},Au&units=metric&APPID=${api}`;
         

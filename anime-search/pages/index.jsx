@@ -39,7 +39,7 @@ import Header from "../components/Header";
 }
 
 export const getStaticProps = async (context) => {
-  const api = process.env.API_KEY;
+  const api = process.env.API_KEY3;
   let city = 'Melbourne';
   let countryCode = 'Au';
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
