@@ -8,7 +8,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
                 <div>
                     <Image 
                     src="/Images/day.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -18,7 +18,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "01n":
             return <Image 
                     src="/Images/night.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -26,7 +26,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "02d":
             return <Image 
                     src="/Images/cloudy-day-1.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -34,7 +34,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "02n" :
             return <Image 
                     src="/Images/cloudy-night-1.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -42,7 +42,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "03d" || "03n" || "04d" || "04n":
             return <Image 
                     src="/Images/cloudy.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     /> 
@@ -50,7 +50,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "09d" || "09n" || "10d" || "10n":
             return <Image 
                     src="/Images/rainy-6.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -58,7 +58,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "11d" || "11n":
             return <Image 
                     src="/Images/thunder.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -67,7 +67,7 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "13d" || "13n":
             return <Image 
                     src="/Images/snowy-6.svg" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
@@ -75,14 +75,14 @@ function WeatherSVG({ weatherIcon, cityData, height, width }) {
         case "50d" || "50n":
             return <Image 
                     src="/Images/mist.png" 
-                    alt={ cityData?.weather[0].description } 
+                    alt={ cityData } 
                     height={250}
                     width={250}
                     />
     
         default: return <Image 
                         src="/Images/cloudy-day-1.svg" 
-                        alt={ cityData?.weather[0].description } 
+                        alt={ cityData } 
                         height={height}
                         width={width}
                         />

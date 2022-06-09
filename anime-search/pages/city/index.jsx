@@ -27,7 +27,7 @@ function Search() {
                     <a>Adelaide</a>
                 </Link>
                 <Link href="/city/hobart">
-                    <a>Hobert</a>
+                    <a>Hobart</a>
                 </Link>
                 <Link href="/city/perth">
                     <a>Perth</a>

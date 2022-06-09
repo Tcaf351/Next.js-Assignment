@@ -4,8 +4,8 @@ import WeatherSVG from '../components/WeatherSVG';
 
 // const Home: NextPage = () => {
   const Home = (props) => {
-    console.log(props);
-    console.log(props);
+
+    console.log(props.data?.weather[0].icon);
 
   return (
     
@@ -34,6 +34,7 @@ import WeatherSVG from '../components/WeatherSVG';
               <div className="flex items-center justify-center">
                 <h1 className="mr-3 text-2xl font-semibold">{ props.data.name }</h1>
                 <WeatherSVG 
+                  weatherIcon={props.data?.weather[0].icon}
                   height={200}
                   width={200}
                 />
@@ -54,7 +55,8 @@ import WeatherSVG from '../components/WeatherSVG';
 }
 
 export const getStaticProps = async () => {
-  const api = process.env.API_KEY3;
+
+  const api = process.env.API;
   let city = 'Melbourne';
   let countryCode = 'Au';
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
