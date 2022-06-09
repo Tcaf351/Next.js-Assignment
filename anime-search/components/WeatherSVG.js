@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 
-function WeatherSVG({ weatherIcon, cityData }) {
+function WeatherSVG({ weatherIcon, cityData, height, width }) {
     switch (weatherIcon) {
         case "01d":
             return (
@@ -83,8 +83,8 @@ function WeatherSVG({ weatherIcon, cityData }) {
         default: return <Image 
                         src="/Images/cloudy-day-1.svg" 
                         alt={ cityData?.weather[0].description } 
-                        height={250}
-                        width={250}
+                        height={height}
+                        width={width}
                         />
     }
 }
