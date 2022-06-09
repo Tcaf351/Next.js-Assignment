@@ -45,6 +45,8 @@ function City() {
         <WeatherSVG 
             weatherIcon={weatherIcon} 
             cityData={cityData}
+            height={100}
+            width={100}
             />
             
 

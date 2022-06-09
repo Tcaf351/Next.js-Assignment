@@ -31,9 +31,6 @@ import WeatherSVG from '../components/WeatherSVG';
 
           {/* image on right of screen start */}
           <div className="flex flex-col items-center justify-center">
-              {/* <h1></h1>
-              <h1>Current temperature:  C</h1>
-              <h1></h1> */}
               <div className="flex items-center justify-center">
                 <h1 className="mr-3 text-2xl font-semibold">{ props.data.name }</h1>
                 <WeatherSVG 
