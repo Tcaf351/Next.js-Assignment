@@ -2,12 +2,13 @@ import Image from 'next/image';
 
 
 function WeatherSVG({ weatherIcon, cityData, height, width }) {
+
     switch (weatherIcon) {
         case "01d":
             return (
                 <div>
                     <Image 
-                    src="/Images/day.svg" 
+                    src="/Images/sunny.svg" 
                     alt={ cityData } 
                     height={250}
                     width={250}

@@ -5,8 +5,6 @@ import WeatherSVG from '../components/WeatherSVG';
 // const Home: NextPage = () => {
   const Home = (props) => {
 
-    console.log(props.data?.weather[0].icon);
-
   return (
     
     <div className="min-h-screen bg-gray-100">
