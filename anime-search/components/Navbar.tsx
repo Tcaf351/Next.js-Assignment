@@ -5,6 +5,11 @@ function Navbar() {
         <nav className="min-w-full">
             <ul className="flex items-center justify-center">
                 <li className="mx-4 mt-2 py-2 px-4 text-lg hover:bg-slate-300 hover:shadow-md rounded-lg">
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li className="mx-4 mt-2 py-2 px-4 text-lg hover:bg-slate-300 hover:shadow-md rounded-lg">
                     <Link href="/city">
                         <a>Search</a>
                     </Link>
