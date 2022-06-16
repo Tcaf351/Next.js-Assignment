@@ -44,12 +44,10 @@ function City({ data }) {
 
 
 export const getServerSideProps = async (context) => {
-        // const api = process.env.API_KEY3;
-        // const api = '8ca87131555f214021777eb3cbe3a678';
 
-        const id = context.params.id;
-    
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${id},Au&APPID=${process.env.API}`);
+    const id = context.params.id;
+
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${id},Au&units=metric&APPID=${process.env.API}`);
     const data = await response.json();    
     
     console.log(data);
