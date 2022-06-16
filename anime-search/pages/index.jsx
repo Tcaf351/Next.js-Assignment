@@ -52,22 +52,22 @@ import WeatherSVG from '../components/WeatherSVG';
   
 }
 
-// export const getStaticProps = async () => {
+export const getStaticProps = async () => {
 
-//   const api = process.env.API;
-//   let city = 'Melbourne';
-//   let countryCode = 'Au';
-//   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
+  const api = process.env.API;
+  let city = 'Melbourne';
+  let countryCode = 'Au';
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
 
-//   const response = await fetch(url);
-//   const data = await response.json();
+  const response = await fetch(url);
+  const data = await response.json();
 
   
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// };
+  return {
+    props: {
+      data,
+    },
+  };
+};
 
 export default Home
