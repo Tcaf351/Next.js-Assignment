@@ -3,7 +3,7 @@ import Link from 'next/link';
 function Navbar() {
     return ( 
         <nav className="min-w-full">
-            <ul className="flex items-center justify-center">
+            <ul className="xs:flex xs:flex-col lg:flex-row xs:items-center xs:justify-center">
                 <li className="mx-4 mt-2 py-2 px-4 text-lg hover:bg-slate-300 hover:shadow-md rounded-lg">
                     <Link href="/">
                         <a>Home</a>

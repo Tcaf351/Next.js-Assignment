@@ -4,13 +4,12 @@ import Header from '../../components/Header';
 function City({ data }) {
     
     return ( 
-        <div className='flex flex-col items-center justify-center h-screen max-w-full'>
+        <div className='xs:flex xs:flex-col xs:items-center xs:justify-center xs:h-screen xs:max-w-full'>
             <Header title={data.name} />
-            <h1></h1>
 
-            <div className='flex items-center justify-center'>
+            <div className='xs:flex xs:flex-col md:flex-row xs:items-center xs:justify-center'>
                 {/* left screen start */}
-            <div className='flex flex-row items-center justify-start max-w-screen-lg px-28'>
+            <div className='xs:flex xs:flex-col md:flex-row xs:items-center xs:justify-start xs:max-w-screen-lg px-28'>
                 <h1 className='text-3xl font-semibold'>{data.name}</h1>
                 <WeatherSVG 
                     weatherIcon={data.weather[0].icon} 
@@ -23,16 +22,16 @@ function City({ data }) {
 
 
             {/* right screen start */}
-            <div className='flex flex-col items-center justify-end max-w-screen-lg px-28'>
-                <h1 className='text-lg font-medium'>Minumum Temperature: { Math.round(data.main.temp_min) }&#8451;</h1>
-                <h1 className='text-lg font-medium'>Maximum Temperature: { Math.round(data.main.temp_max) }&#8451;</h1>
+            <div className='xs:flex xs:flex-row md:flex-col xs:items-center xs:justify-center lg:justify-end max-w-screen-lg xs:px-3 lg:mx-0 lg:px-28'>
+                <h1 className='text-lg font-medium capitalize mx-6'>Minumum Temperature: { Math.round(data.main.temp_min) }&#8451;</h1>
+                <h1 className='text-lg font-medium capitalize mx-6'>Maximum Temperature: { Math.round(data.main.temp_max) }&#8451;</h1>
             </div>
             {/* right screen end */}
             </div>
 
 
             {/* bottom screen start */}
-            <div className='py-10'>
+            <div className='py-10 xs:flex xs:items-center xs:justify-center xs:flex-col'>
                 <h1 className='text-lg font-medium capitalize'>Current temperature: { Math.round(data.main.temp) }&#8451;</h1>
                 <h1 className='text-lg font-medium capitalize'>{ data.weather[0].description }</h1>
             </div>
